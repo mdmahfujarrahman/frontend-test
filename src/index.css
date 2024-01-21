@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* style overWrite */
+
+.MuiTableCell-root {
+    justify-content: center;
+}
+
+.MuiTableCell-root:nth-child(3) {
+    width: 250px !important;
+    overflow: hidden;
+}
+.MuiTableCell-root:nth-child(3) {
+    width: 250px !important;
+    overflow: hidden;
+}
+
+.MuiFormControl-root {
+    padding: 20px !important;
+}
