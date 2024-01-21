@@ -11,7 +11,7 @@ const Home = () => {
                     Leads Table
                 </Link>
                 <Link
-                    to={"/leads-Chart"}
+                    to={"/leads-chart"}
                     className="bg-primary py-2 px-5 rounded text-white"
                 >
                     Leads Chart
