@@ -1,10 +1,10 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useMemo, useState } from "react";
 import { AppServices } from "../services/appServices";
-
+import PropTypes from "prop-types";
 export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-    const [LeadsData, setLeadsData] = useState([]);
+    const [leadsData, setLeadsData] = useState([]);
     const [isLoading, setIsLoading] = useState([]);
 
     const getTaskDatas = async () => {
@@ -22,11 +22,19 @@ const AppProvider = ({ children }) => {
         getTaskDatas();
     }, []);
 
+    const AppData = useMemo(() => {
+        return { leadsData, isLoading, setIsLoading };
+    }, [leadsData, isLoading]);
+
+    console.log(AppData);
+
     return (
-        <AppContext.Provider value={{ LeadsData, isLoading, setIsLoading }}>
-            {children}
-        </AppContext.Provider>
+        <AppContext.Provider value={AppData}>{children}</AppContext.Provider>
     );
+};
+
+AppProvider.propTypes = {
+    children: PropTypes.node.isRequired,
 };
 
 export default AppProvider;

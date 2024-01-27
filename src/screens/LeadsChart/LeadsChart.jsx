@@ -4,12 +4,11 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import BarCharts from "../../components/BarCharts/BarCharts";
 
 const LeadsChart = () => {
-    const { LeadsData, isLoading } = useContext(AppContext);
+    const { isLoading, leadsData } = useContext(AppContext);
     return (
         <div className="flex flex-col">
             <PageHeader title="Leads Chart" />
-
-            {isLoading ? "loading" : <BarCharts chartData={LeadsData} />}
+            {isLoading ? "loading" : <BarCharts chartData={leadsData} />}
         </div>
     );
 };

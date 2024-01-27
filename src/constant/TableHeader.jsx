@@ -16,11 +16,7 @@ export const LeadsTableHeaders = [
             filter: false,
             sort: true,
             customBodyRender: (value) => {
-                return (
-                    <>
-                        <span className="w-28">{value}</span>
-                    </>
-                );
+                return <span className="w-28">{value}</span>;
             },
         },
     },
@@ -32,14 +28,12 @@ export const LeadsTableHeaders = [
             sort: true,
             customBodyRender: (value) => {
                 return (
-                    <>
-                        <Link
-                            to={value}
-                            className="py-[4px] px-2 bg-primary rounded text-white"
-                        >
-                            Visit Link
-                        </Link>
-                    </>
+                    <Link
+                        to={value}
+                        className="py-[4px] px-2 bg-primary rounded text-white"
+                    >
+                        Visit Link
+                    </Link>
                 );
             },
         },
@@ -82,7 +76,6 @@ export const LeadsTableHeaders = [
             filter: false,
             sort: true,
             customBodyRender: (value) => {
-                console.log(value);
                 return (
                     <>
                         {value === 1 ? (
@@ -106,7 +99,6 @@ export const LeadsTableHeaders = [
             filter: false,
             sort: true,
             customBodyRender: (value) => {
-                console.log(value);
                 return (
                     <>
                         {value === 1 ? (

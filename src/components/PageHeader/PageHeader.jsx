@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const PageHeader = ({ title }) => {
     return (
@@ -6,6 +6,10 @@ const PageHeader = ({ title }) => {
             <h4 className="text-xl uppercase">{title}</h4>
         </div>
     );
+};
+
+PageHeader.propTypes = {
+    title: PropTypes.string.isRequired,
 };
 
 export default PageHeader;

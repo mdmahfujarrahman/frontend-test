@@ -6,7 +6,7 @@ import TableSkeleton from "../../components/Loder/TableSkeleton";
 import CustomTable from "../../components/CustomTable/CustomTable";
 
 const LeadsTable = () => {
-    const { LeadsData, isLoading } = useContext(AppContext);
+    const { isLoading, leadsData } = useContext(AppContext);
     return (
         <div className="flex flex-col">
             <PageHeader title={"Leads Table"} />
@@ -14,7 +14,7 @@ const LeadsTable = () => {
                 <TableSkeleton />
             ) : (
                 <CustomTable
-                    tablesDatas={LeadsData}
+                    tablesDatas={leadsData}
                     tableHeaders={LeadsTableHeaders}
                 />
             )}

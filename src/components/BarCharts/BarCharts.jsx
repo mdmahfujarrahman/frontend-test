@@ -9,6 +9,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { convertChartData } from "../../healper/convertChartData";
+import propTypes from "prop-types";
 
 ChartJS.register(
     CategoryScale,
@@ -56,6 +57,10 @@ const BarCharts = ({ chartData }) => {
             <Bar options={options} data={data} />
         </div>
     );
+};
+
+BarCharts.propTypes = {
+    chartData: propTypes.array.isRequired,
 };
 
 export default BarCharts;

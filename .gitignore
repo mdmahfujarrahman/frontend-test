@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Testing 
+sonarqube-scanner.js
+.scannerwork
+

@@ -1,8 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 
-const MainLayout = ({ children }) => {
-    console.log(children);
+const MainLayout = () => {
     return (
         <div>
             <Navbar />

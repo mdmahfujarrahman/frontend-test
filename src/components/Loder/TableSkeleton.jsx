@@ -1,4 +1,4 @@
-import React from "react";
+import { dummyArray } from "../../constant";
 
 const TableSkeleton = () => {
     return (
@@ -11,60 +11,20 @@ const TableSkeleton = () => {
                 </div>
             </div>
             <div className="border-b-2 mb-4" />
-            <div className="flex w-full gap-5 mb-4">
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-            </div>
-            <div className="flex w-full gap-5 mb-4">
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-            </div>
-            <div className="flex w-full gap-5 mb-4">
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-            </div>
-            <div className="flex w-full gap-5 mb-4">
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-            </div>
-            <div className="flex w-full gap-5 mb-4">
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-            </div>
-            <div className="flex w-full gap-5 mb-4">
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-                <div className="h-7 w-[14%] animate-pulse bg-slate-500 rounded-sm" />
-            </div>
+            {dummyArray.slice(0, 10).map((item) => {
+                return (
+                    <div key={item} className="flex w-full gap-5 mb-4">
+                        {dummyArray.slice(0, 8).map((itemChild) => {
+                            return (
+                                <div
+                                    key={itemChild}
+                                    className="h-7 w-[16%] animate-pulse bg-slate-500 rounded-sm"
+                                />
+                            );
+                        })}
+                    </div>
+                );
+            })}
         </div>
     );
 };
